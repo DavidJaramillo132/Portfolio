@@ -1,0 +1,259 @@
+body{
+    background-color: rgb(54, 51, 48);
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    
+}
+html{ 
+ scroll-behavior: smooth; 
+}
+
+h2{
+    text-align: center;
+    text-decoration:underline;
+}
+p{
+    margin: 5px auto 5px auto;
+}
+
+li{
+    list-style: none;
+}
+
+/* La ´parte del navegador superior */
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 60px;
+}
+
+.top{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 1;
+    background-color: rgb(182, 76, 76);
+}
+
+a{
+    text-decoration: none;
+    color:aliceblue
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* Todo el contenido principal */
+#header-img{
+    margin: 10px auto 10px 10px;
+    height: 60px;
+    width: auto;
+    position:relative;
+}
+
+
+img{
+    height: 100px;
+}
+
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 8%;
+}
+
+#welcome-section img{
+    height: 45%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.welcome{
+    text-align: center;
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 80px auto;
+
+}
+
+
+
+.img-projects{
+    height: 350px;
+    width: 400px;
+    margin-top: 50px;
+}
+
+.subtitle{
+    text-align: center;
+    justify-items: center;
+    width: 400px;
+    background-color: rgb(105, 75, 75);
+    padding: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.subtitle a{
+    color:antiquewhite;
+    transition: 0.5s;
+}
+
+.subtitle:hover{
+    background-color: rgb(196, 159, 113);
+}
+.subtitle:hover a{
+    color: black;
+
+}
+
+
+
+/* Todo lo del final de la pagina */
+
+.footer__contact p{
+    text-align: center;;
+    margin: 12px auto 30px auto
+}
+
+
+#footer{
+    width: 100%;
+    background-color: rgb(100, 88, 75);
+}
+
+.footer__contact{
+    padding-top: 20%;
+    height: 100vh;
+    width: 100%;
+}
+.container__footer__grid{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.footer__title{
+    color: white;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+    color:rgb(227, 227, 227);
+    font-size: 40px;
+    text-decoration: none;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+.footer__icons:hover{
+    color: rgb(191, 145, 93);
+}
+
+
+.footer-end{
+    margin-top: 150px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    border-top: 5px solid rgb(87, 42, 42);
+    text-align: center;
+}
+
+
+
+
+/* Haciendo la pagina responsiva */
+
+@media screen and (max-width: 1300px){
+    #projects{
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+    .footer-end{
+        margin-top: 350px;
+    }
+    
+}
+
+@media screen and (max-width: 860px){
+    #projects{
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+    .footer-end{
+        margin-top: 220px;
+    }
+
+    @media screen and (max-width: 600px){
+        #welcome-section{
+            margin-top: 25%;
+        }
+
+        .footer__title{
+            font-size: 2em;
+        }
+        a {
+            font-size: 12px;
+        }
+        .footer__contact{
+            height: 70vh;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        a {
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .subtitle a{
+            font-size: 20px;
+        }
+
+
+
+        .subtitle{
+            width: 320px;
+        }
+            
+        .img-projects{
+            height: 350px;
+            width: 320px;
+        }
+        .footer-end p{
+            font-size: 10px;
+        }
+    }
+}
